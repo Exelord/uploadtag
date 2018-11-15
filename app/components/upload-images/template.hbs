@@ -1,4 +1,10 @@
 <div class="input-group">
   <input type="file" multiple class="custom-file-input" id="customFile" onchange={{action "onChange"}}>
   <label class="custom-file-label" for="customFile">Choose file</label>
+
+  {{#each images as |image|}}
+    <li>{{image.name}}</li>
+    <li>{{image.size}}</li>
+    <li>{{image.url}}</li>
+  {{/each}}
 </div>
